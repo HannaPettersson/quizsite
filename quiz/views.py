@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding: utf-8
 from django.shortcuts import render
 
 quizzes = {
@@ -6,13 +6,15 @@ quizzes = {
    		"name": u"Klassiska böcker",
 	   	"description": u"Hur bra kan du dina klassiker?"
 	},
+
 	"fotboll": {
 	   	"name": u"Största fotbollslagen",
 	   	"description": u"Kan du dina lag?"
 	},
 	"kanda-hackare": {
 	    	"name": u"Världens mest kända hackare",
-	    	"description": u"Hackerhistoria är viktigt, kan du den?"	},
+	    	"description": u"Hackerhistoria är viktigt, kan du den?"
+	},
 }
 
 def startpage(request):
