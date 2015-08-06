@@ -48,8 +48,8 @@ margin: 0 auto;
 }
 
 .circular {
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
