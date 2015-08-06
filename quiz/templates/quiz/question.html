@@ -14,13 +14,13 @@
 
 				<div class="wrapper">
 					<div class="header">
-						<h1>Fråga Lorem ipsum dolow sit amed? </h1>
+						<h1>{{ question_number }} . {{ question }}</h1>
 					</div>
 			
 					<form>
-						<input type="radio" name="alternative" value="1">Val 1 <br>
-						<input type="radio" name="alternative" value="2">Val 2 <br>
-						<input type="radio" name="alternative" value="2">Val 3 <br>
+						<input type="radio" name="alternative" value="1">{{ answer1 }}<br>
+						<input type="radio" name="alternative" value="2">{{ answer2 }}<br>
+						<input type="radio" name="alternative" value="2">{{ answer3 }}<br>
 					</form>
 
 					<button>Skicka in</button>
