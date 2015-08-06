@@ -15,21 +15,27 @@
 		
 		<div class="header">
 			<h1>Vem är bäst på Lorem ipsum. </h1>
-
-			{% for quiz_slug, quiz in quizzes.items %}
-   	 <p><a href="{% url "quiz_page" quiz_slug %}">
-		{{ quiz.name }}
-	</a></p>
-{% endfor %}
 		</div>
+
+		<div class="box">
+			{% for quiz_slug, quiz in quizzes.items %}
+
+			<h2>{{quiz.name}}</h2>
+			<div style="background-image: url('/static/{{quiz.image}}')" class="circular"></div>
+			<p>{{quiz.description}}</p>
+			<p><a href="{% url "quiz_page" quiz_slug %}">Starta</a></p>
+			{% endfor %}
+
+		</div>
+		
 				<div class="container">
-
-
 					<div class="row">
 							<div class="column">
 								<h2>Namn på Quiz 1</h2>
 								<!--<img src="http://placekitten.com/g/200/300">-->
-								<div class="circular"></div>
+
+
+								<div style="background-image: /static/{{quiz.image}})" class="circular"></div>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. </p>
 								<button type="button">Starta </button>
 							</div>

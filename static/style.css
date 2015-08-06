@@ -53,5 +53,11 @@ margin: 0 auto;
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
-	background: url(http://placekitten.com/g/200/300) no-repeat;
+	/*background: url(http://placekitten.com/g/200/300) no-repeat;*/
 	}
+.box {
+	display: inline-block;
+  	width: 200px;
+  	height: 100px;
+  	margin: 1em;
+}

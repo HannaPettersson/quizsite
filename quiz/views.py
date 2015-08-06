@@ -4,16 +4,19 @@ from django.shortcuts import render
 quizzes = {
 	"klassiker": {
    		"name": u"Klassiska böcker",
-	   	"description": u"Hur bra kan du dina klassiker?"
+	   	"description": u"Hur bra kan du dina klassiker?", 
+	   	"image": "katt1.jpg"
 	},
 
 	"fotboll": {
 	   	"name": u"Största fotbollslagen",
-	   	"description": u"Kan du dina lag?"
+	   	"description": u"Kan du dina lag?",
+	   	"image": "katt2.jpg"
 	},
 	"kanda-hackare": {
 	    	"name": u"Världens mest kända hackare",
-	    	"description": u"Hackerhistoria är viktigt, kan du den?"
+	    	"description": u"Hackerhistoria är viktigt, kan du den?",
+	    	"image": "katt3.jpg"
 	},
 }
 
