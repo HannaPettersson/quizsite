@@ -15,12 +15,13 @@
 		
 		<div class="header">
 			<h1>Vem är bäst på Lorem ipsum. </h1>
+
+			{% for quiz_slug, quiz in quizzes.items %}
+			<p>{{ quiz.name }}</p>
+			{% endfor %}
 		</div>
 				<div class="container">
 
-				{% for quiz_slug, quiz in quizzes.items %}
-				<p>{{ quiz.name }}</p>
-				{% endfor %}
 
 					<div class="row">
 							<div class="column">

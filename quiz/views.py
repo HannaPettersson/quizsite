@@ -18,7 +18,10 @@ quizzes = {
 }
 
 def startpage(request):
-	return render(request, "quiz/index.html")
+	context = {
+		"quizzes": quizzes,
+	}
+	return render(request, "quiz/index.html", context)
 
 def quiz(request):
 	return render(request, "quiz/quiz.html")
