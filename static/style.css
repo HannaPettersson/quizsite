@@ -5,6 +5,16 @@ font-weight: 700;
 line-height: 1.1;
 }
 
+h2 {
+font-size: 3em;
+margin: 0px;
+}
+
+p{
+font-weight: 400;
+font-size: 1em;
+}
+
 html, body, .container{
 	font-family: 'Open Sans', sans-serif;
 	/*height: 100%;
@@ -15,6 +25,23 @@ html, body, .container{
 
 }
 
+a {
+	text-transform: uppercase;
+  	color: #32fdc8;
+  	font-weight: 700;
+  	font-size: 1.5em;
+  /* text-decoration: underline; */
+  	border-bottom: 5px solid #32fdc8;
+  	padding-bottom: 3px;
+  	text-decoration: none;
+  	text-align: right;
+
+}
+
+.header {
+	margin-bottom: 100px;
+}
+
 .rotating_text {
 	color: #32fdc8;
 	font-size: 8em; 
@@ -22,11 +49,13 @@ html, body, .container{
 	font-weight: 700;
 	line-height: 1.1;
 	text-decoration: underline;
+	
 }
 
 .container {
 	display:table;
-	margin: 0 auto;
+	margin-top: 50px;
+	/*margin: 0 auto;
 	/*background-color: blue;*/
 }
 
@@ -38,7 +67,7 @@ html, body, .container{
 .column {
 	display: table-cell;
 	vertical-align: middle;
-	border: 1px solid;
+	/*border: 1px solid;*/
 	padding: 20px;
 	background-color: white;
 
@@ -60,11 +89,13 @@ margin: 0 auto;
 }
 
 .circular {
-	width: 150px;
-	height: 150px;
-	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
+	width: 300px;
+	height: 300px;
+	border: 15px solid;
+	border-radius: 160px;
+	-webkit-border-radius: 160px;
+	-moz-border-radius: 160px;
+	margin:15px;
 	/*background: url(http://placekitten.com/g/200/300) no-repeat;*/
 	}
 .box {
