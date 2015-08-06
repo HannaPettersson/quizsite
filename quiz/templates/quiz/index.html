@@ -17,8 +17,10 @@
 			<h1>Vem är bäst på Lorem ipsum. </h1>
 
 			{% for quiz_slug, quiz in quizzes.items %}
-			<p>{{ quiz.name }}</p>
-			{% endfor %}
+   	 <p><a href="{% url "quiz_page" quiz_slug %}">
+		{{ quiz.name }}
+	</a></p>
+{% endfor %}
 		</div>
 				<div class="container">
 
