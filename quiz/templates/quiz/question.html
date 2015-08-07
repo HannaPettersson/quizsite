@@ -17,7 +17,7 @@
 						<h1>{{ question_number }} . {{ question }}</h1>
 					</div>
 			
-					<form>
+					<form action="{% url "question_page" quiz.slug question_number %}" method="post">
 						<input type="radio" name="alternative" value="1">{{ answer1 }}<br>
 						<input type="radio" name="alternative" value="2">{{ answer2 }}<br>
 						<input type="radio" name="alternative" value="2">{{ answer3 }}<br>
