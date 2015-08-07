@@ -1,6 +1,7 @@
 #coding: utf-8
 from django.shortcuts import render
 from quiz.models import Quiz
+from django.shortcuts import redirect
 
 quizzes = {
 	"klassiker": {
@@ -35,14 +36,21 @@ def quiz(request, slug):
 	return render(request, "quiz/quiz.html", context)
 
 def question(request, slug, number):
+	number = int(number)
+	quiz = Quiz.objects.get(slug=slug)
+	questions = quiz.questions.all()
+	question = questions[number - 1]
+	if number > questions.count():
+		return redirect("completed_page", quiz.slug)
 	context = {
-		"question_number": number,
-	    	"question": u"Hur många bultar har ölandsbron?",
-		"answer1": u"12",
-	   	"answer2": u"66 400",
-	    	"answer3": u"7 428 954",
-	    	"quiz_slug": slug,
+	    	"question_number": number,
+	    	"question": question.question,
+		    "answer1": question.answer1,
+	    	"answer2": question.answer2,
+		    "answer3": question.answer3,
+		    "quiz": quiz,
 	}
+	
 	return render(request, "quiz/question.html", context)
 
 def completed(request, slug):

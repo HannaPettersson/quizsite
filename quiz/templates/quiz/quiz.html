@@ -7,25 +7,20 @@
 		<link rel="stylesheet" href="/static/style.css">
 	</head>
 	<body>
+	<div class="border">
+		<div class="container">
+			<div class="row">
+				<div class="column">
 
-	<div class="container">
-		<div class="row">
-			<div class="column">
+					<div class="wrapper">
+						<div class="header">
 
-				<div class="wrapper">
-					<div class="header">
-						
-						<h1>{{ quiz.name }}</h1>
-						<p>{{ quiz.description }}</p>
+							<h1>{{ quiz.name }}</h1>
+							<p>{{ quiz.description }}</p>
+						</div>
+
+						<p><a href="{% url "question_page" quiz.slug 1 %}">Starta</a></p>
 					</div>
-			
-					<form>
-						<input type="radio" name="alternative" value="1">Val 1 <br>
-						<input type="radio" name="alternative" value="2">Val 2 <br>
-						<input type="radio" name="alternative" value="2">Val 3 <br>
-					</form>
-
-					<p><a href="{% url "question_page" quiz.slug 1 %}">Starta</a></p>
 				</div>
 			</div>
 		</div>
