@@ -77,6 +77,7 @@ def question(request, slug, number):
 def completed(request, slug):
 
 	quiz = Quiz.objects.get(slug=slug)
+	print quiz
 	questions = quiz.questions.all()
 	saved_answers = request.session[slug]
 
