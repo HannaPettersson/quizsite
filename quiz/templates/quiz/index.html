@@ -12,29 +12,31 @@
 	<div class="border">
 		<div class="header">
 			
-			<div id="news_ticker">
-					<ul>
-						<li><a href="#">iPhone 5</a></li>
-						<li><a href="#">iPad 3</a></li>
-						<li><a href="#">MacBook Air</a></li>
-						<li><a href="#">MacBook Pro</a></li>
-					</ul>
+			
+
+			<h1>Testa dig. Hur mycket kan du om</h1>
+
+
+			<div class="roller">
+				<ul>
+					{% for quiz in quizzes %}
+						<li><a href="{% url "question_page" quiz.slug 1 %}">{{quiz.name}}</a></li>
+					{% endfor %}
+				</ul>
 				</div>
 
-			<h1>Testa dig. Hur mycket kan du om</h1><div class="rotating_text">fotboll?</div>
-		</div>
 
 	<div class="container">
 
 					{% for quiz in quizzes %}
 							<div class="row">
 								<div class="column">
-									<div style="background-image: url('/static/{{quiz.image}}')" class="circular"></div>
+									<div style="background-image: url('/static/{{quiz.imagelink}}')" class="circular"></div>
 								</div>
 								<div class="column">
 									<h2>{{quiz.name}}</h2>
 									<p>{{quiz.description}}</p>
-									<p><a href="{% url "quiz_page" quiz.slug %}">Starta > </a></p>
+									<p><a href="{% url "question_page" quiz.slug 1 %}">Starta > </a></p>
 								</div>
 							</div>
 					{% endfor %}

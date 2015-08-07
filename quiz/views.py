@@ -54,7 +54,7 @@ def question(request, slug, number):
  		saved_answers[str(number)] = answer
  		request.session[quiz.slug] = saved_answers
 
- 		if questions.count() == number:
+		if questions.count() == number:
  			return redirect("completed_page", quiz.slug)
  		else:
  			return redirect("question_page", quiz.slug, number +1)
