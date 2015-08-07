@@ -8,17 +8,20 @@
 	</head>
 	<body>
 
-	<div class="container">
-		<div class="row">
-			<div class="column">
+	<div class="border">
 
-				<div class="wrapper">
-					<div class="header">
-						<h1>Du är klar och fick  {{ correct }} av {{total}} </h1>
+		<div class="container">
+			<div class="row">
+				<div class="column">
 
-						<p><a href="{% url "start_page" %}">Till startsidan</a></p>
+					<div class="wrapper">
+						<div class="header">
+							<h1>Du är klar och fick  {{ correct }} av {{total}} </h1>
+
+							<p><a href="{% url "start_page" %}">Gör ett nytt quiz</a></p>
+						</div>
+
 					</div>
-
 				</div>
 			</div>
 		</div>

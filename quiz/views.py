@@ -46,6 +46,8 @@ def question(request, slug, number):
 
 	if request.POST:
 		answer = int(request.POST["answer"])
+		print answer
+
 
 		saved_answers = {}
 		if quiz.slug in request.session:

@@ -10,6 +10,13 @@ font-size: 3em;
 margin: 0px;
 }
 
+h3 {
+	text-align: center;
+	text-transform: uppercase;
+	color: #32fdc8;
+	/*text-decoration: underline;*/
+}
+
 p{
 font-weight: 400;
 font-size: 1.1em;
@@ -114,6 +121,7 @@ margin: 0 auto;
 	-webkit-border-radius: 160px;
 	-moz-border-radius: 160px;
 	margin:15px;
+	background-position: center;
 	/*background: url(http://placekitten.com/g/200/300) no-repeat;*/
 	}
 .box {
@@ -172,9 +180,6 @@ min-height: 70vh;
 	margin: -10px;
 
 }
-
-
-
 
 ul {
 	float: left;
