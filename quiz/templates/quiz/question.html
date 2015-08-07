@@ -7,22 +7,43 @@
 		<link rel="stylesheet" href="/static/style.css">
 	</head>
 	<body>
+	<div class="border">
 
-	<div class="container">
-		<div class="row">
-			<div class="column">
+		<div class="container">
+			<div class="row">
+				<div class="column">
 
-				<div class="wrapper">
-					<div class="header">
-						<h1>{{ question_number }} . {{ question }}</h1>
+					<div class="wrapper">
+						<div class="header">
+							<h1>{{ question_number }} . {{ question }}</h1>
+						</div>
+				
+						<form action="{% url "question_page" quiz.slug question_number %}" method="post">
+							{% csrf_token %}
+							<p>
+								<label>
+									<input type="radio" name="answer" value="1">
+									{{ answer1 }}
+								</label>
+							</p>
+
+							<p>
+								<label>
+									<input type="radio" name="answer" value="1">
+									{{ answer2 }}
+								</label>
+							</p>
+
+							<p>
+								<label>
+									<input type="radio" name="answer" value="1">
+									{{ answer3 }}
+								</label>
+							</p>
+							<button type="submit">Nästa ></button>
+						</form>
+						
 					</div>
-			
-					<form action="{% url "question_page" quiz.slug question_number %}" method="post">
-						<input type="radio" name="alternative" value="1">{{ answer1 }}<br>
-						<input type="radio" name="alternative" value="2">{{ answer2 }}<br>
-						<input type="radio" name="alternative" value="2">{{ answer3 }}<br>
-					</form>
-					<p><a href="{% url "question_page" quiz.slug question_number|add:1 %}">Nästa</a></p>
 				</div>
 			</div>
 		</div>
