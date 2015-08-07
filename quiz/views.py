@@ -1,5 +1,6 @@
 #coding: utf-8
 from django.shortcuts import render
+from quiz.models import Quiz
 
 quizzes = {
 	"klassiker": {
@@ -22,14 +23,14 @@ quizzes = {
 
 def startpage(request):
 	context = {
-		"quizzes": quizzes,
+	    "quizzes": Quiz.objects.all(),
 	}
+
 	return render(request, "quiz/index.html", context)
 
 def quiz(request, slug):
 	context = {
-		"quiz": quizzes[slug],
-		"quiz_slug": slug,
+	    	"quiz": Quiz.objects.get(slug=slug),
 	}
 	return render(request, "quiz/quiz.html", context)
 

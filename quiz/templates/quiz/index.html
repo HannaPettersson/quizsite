@@ -15,8 +15,8 @@
 		</div>
 
 	<div class="container">
-					{% for quiz_slug, quiz in quizzes.items %}
-						
+
+					{% for quiz in quizzes %}
 							<div class="row">
 								<div class="column">
 									<div style="background-image: url('/static/{{quiz.image}}')" class="circular"></div>
@@ -24,10 +24,10 @@
 								<div class="column">
 									<h2>{{quiz.name}}</h2>
 									<p>{{quiz.description}}</p>
-									<p><a href="{% url "quiz_page" quiz_slug %}">Starta > </a></p>
+									<p><a href="{% url "quiz_page" quiz.slug %}">Starta > </a></p>
 								</div>
 							</div>
-							{% endfor %}
+					{% endfor %}
 					
 	</div>
 	</div>
