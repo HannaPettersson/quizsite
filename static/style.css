@@ -40,7 +40,7 @@ input{
 
 }
 
-html, body, .container{
+html, body{
 	font-family: 'Open Sans', sans-serif;
 	/*height: 100%;
 	margin: 0 auto;
@@ -77,26 +77,9 @@ a {
 
 }
 
-.container {
-	display:table;
-	margin-top: 50px;
-	/*margin: 0 auto;
-	/*background-color: blue;*/
-}
 
-.row {
-	display: table-row;
 
-}
 
-.column {
-	display: table-cell;
-	vertical-align: middle;
-	/*border: 1px solid;*/
-	padding: 20px;
-	background-color: white;
-
-}
 
 .wrapper {
 	/*border: 1px, solid black;*/
@@ -114,13 +97,16 @@ margin: 0 auto;
 }
 
 .circular {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
 	width: 300px;
 	height: 300px;
 	border: 15px solid;
 	border-radius: 160px;
 	-webkit-border-radius: 160px;
 	-moz-border-radius: 160px;
-	margin:15px;
+	/*margin:15px;*/
 	background-position: center;
 	/*background: url(http://placekitten.com/g/200/300) no-repeat;*/
 	}
@@ -204,6 +190,57 @@ li {
 	color: #000;
 	text-decoration: none;
 	font-size: 13px;
+}
+
+
+
+/*@media all and (min-width: 768px) {*/
+@media only screen and (min-width : 768px){
+.container {
+	display:table;
+	margin-top: 50px;
+	/*margin: 0 auto;
+	/*background-color: blue;*/
+}
+
+.row {
+	display: table-row;
+
+}
+
+.column {
+	display: table-cell;
+	vertical-align: middle;
+	/*border: 1px solid;*/
+	padding-left: 20px;
+	background-color: white;
+
+}
+
+}
+/*@media not all and (max-width: 768px) {)*/
+
+@media only screen and (max-width: 768px) {
+
+.container {margin-top: 50px}
+
+.column {background-color: blue;}
+
+h2 {
+	text-align: center;
+	font-size: 7vw;
+}
+
+#start {
+	text-align: center;
+	font-size: 5vw;
+	}
+
+.circular {
+	width: 40vw;
+	height: 40vw;
+}
+
 }
 
 @-webkit-keyframes ticker {
