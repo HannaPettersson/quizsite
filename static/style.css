@@ -21,6 +21,7 @@ p{
 font-weight: 400;
 font-size: 1.1em;
 line-height: 1.3;
+width: 800px;
 }
 
 button {
@@ -55,7 +56,7 @@ a {
   	color: #32fdc8;
   	font-weight: 700;
   	font-size: 1.5em;
-  /* text-decoration: underline; */
+  	/* text-decoration: underline; */
   	border-bottom: 5px solid #32fdc8;
   	padding-bottom: 3px;
   	text-decoration: none;
@@ -138,9 +139,9 @@ linear-gradient(155deg, #fff 10px, transparent 10px);
 }
 
 .border {
-margin: 50px;
+margin: 5vw;
 border: 15px solid;
-padding: 50px;
+padding: 5vw;
 min-height: 70vh;
 
 }
@@ -192,7 +193,7 @@ li {
 
 
 /*@media all and (min-width: 768px) {*/
-@media only screen and (min-width : 768px){
+@media only screen and (min-width : 758px) and (-webkit-max-device-pixel-ratio: 2) {
 .container {
 	display:table;
 	margin-top: 50px;
@@ -217,7 +218,7 @@ li {
 }
 /*@media not all and (max-width: 768px) {)*/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 758px) {
 
 .container {margin-top: 50px}
 
