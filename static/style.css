@@ -1,5 +1,5 @@
 h1 {
-font-size: 7em; 
+font-size: 9vw; 
 margin: 0px;
 font-weight: 700;
 line-height: 1.1;
@@ -69,16 +69,13 @@ a {
 
 .rotating_text {
 	color: #32fdc8;
-	font-size: 8em; 
+	font-size: 10vw; 
 	margin: 0px;
 	font-weight: 700;
 	line-height: 1.1;
 	text-decoration: underline;
 
 }
-
-
-
 
 
 .wrapper {
@@ -149,7 +146,7 @@ min-height: 70vh;
 }
 
 .roller {
-  height: 140px;
+  height: 11vw;
   overflow: hidden;
   position: relative;
   -moz-box-shadow: inset 0px 0px 0px rgba(0,0,0,0.5);
@@ -158,10 +155,10 @@ min-height: 70vh;
 .roller a {
 	text-transform: none;
 	text-decoration: none;
-	font-size: 8em; 
+	font-size: 9vw; 
 	margin: 0px;
 	font-weight: 700;
-	line-height: 1.1;
+	line-height: 10vw;
 	border-bottom: none;
 	margin: -10px;
 
@@ -233,21 +230,23 @@ h2 {
 
 #start {
 	text-align: center;
-	font-size: 5vw;
-	}
+	font-size: 5vw;}
 
 .circular {
 	width: 40vw;
 	height: 40vw;
 }
 
+/*h1 {font-size: 9vw;}*/
+
+
 }
 
 @-webkit-keyframes ticker {
 	0%   {margin-top: 0;}
-	25%  {margin-top: -140px;}
-	50%  {margin-top: -280px;}
-	75%  {margin-top: -140px;}
+	25%  {margin-top: -11vw;}
+	50%  {margin-top: -22vw;}
+	75%  {margin-top: -11vw;}
 	100% {margin-top: 0;}
 }
 @-moz-keyframes ticker {
