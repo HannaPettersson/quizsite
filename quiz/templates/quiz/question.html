@@ -21,24 +21,23 @@
 						<form action="{% url "question_page" quiz.slug question_number %}" method="post">
 							{% csrf_token %}
 							<p>
-								<label>
-									<input type="radio" name="answer" value="1">
-									{{ answer1 }}
-								</label>
+								<div class="radio">
+									<input type="radio" name="answer" value="1"><label for="1">{{ answer1 }}</label>
+									
+								</div>
 							</p>
 
 							<p>
-								<label>
-									<input type="radio" name="answer" value="2">
-									{{ answer2 }}
-								</label>
+								<div class="radio">
+									<input type="radio" name="answer" value="2"><label for="2">{{ answer2 }}</label>
+					
+								</div>
 							</p>
 
 							<p>
-								<label>
-									<input type="radio" name="answer" value="3">
-									{{ answer3 }}
-								</label>
+								<div class="radio">
+									<input type="radio" name="answer" value="3"><label for="3">{{ answer3 }}</label>
+								</div>
 							</p>
 							<button type="submit">Nästa ></button>
 						</form>
